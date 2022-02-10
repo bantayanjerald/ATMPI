@@ -23,7 +23,7 @@
         </div>
         <ul class="sub-menu" >
           <li><a class="link_name" href="#">DCC</a></li>
-          <li><a href="#" >Company Goals</a></li>
+          <li><a href="{{route('dcc.companyGoals.index')}}" >Company Goals</a></li>
           <li style="word-wrap: break-word;"><a href="#" >Engineering Change Notice
         </a></li>
           <li style="word-wrap: break-word;"><a href="#" >Engineering Special Instruction

@@ -17,8 +17,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-
-Route::get('/dashboard', function () {
-    return view('dcc/companyGoals');
+Route::get('/home', function () {
+    return view('home',['title' => "Welcome"]);
 });
+Route::get('/dcc/company_goals',[App\Http\Controllers\DCC\CompanyGoalController::class,'index'])->name('dcc.companyGoals.index');
 

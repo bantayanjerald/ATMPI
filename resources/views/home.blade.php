@@ -1,7 +1,7 @@
 @extends('layouts.main')
 @section('content')
-<section class="mainContent">
-    <div class="cardbox"  >
+<section class="mainContent" style="margin:0; background-image: url('{{asset('images/BG.png')}}');height:817px;width:100%">
+    {{-- <div class="cardbox"  >
         <div class="card">
             <div>
                 <div class="numbers">1,055</div>
@@ -119,7 +119,7 @@
                 <h2>Recent Customers</h2>
                 <a href="#" class="btn">View all</a>
             </div>
-            {{-- <table>
+            <table>
                 <tbody>
                     <tr>
 
@@ -165,7 +165,7 @@
 
 
 
-    </div>
+    </div> --}}
 </section>
 
 @endsection
