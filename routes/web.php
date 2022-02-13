@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\DCC\CompanyGoalController;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,5 +21,7 @@ Route::get('/', function () {
 Route::get('/home', function () {
     return view('home',['title' => "Welcome"]);
 });
-Route::get('/dcc/company_goals',[App\Http\Controllers\DCC\CompanyGoalController::class,'index'])->name('dcc.companyGoals.index');
+
+// route for dcc
+Route::get('/dcc/company_goals',[CompanyGoalController::class,'index'])->name('dcc.companyGoals.index');
 
