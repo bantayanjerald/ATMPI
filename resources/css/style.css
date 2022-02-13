@@ -425,7 +425,22 @@
      grid-template-columns: repeat(4,1fr);
      grid-gap: 20px;
  }
- .cardbox .card
+ .cardbox .card .numbers
+ {
+     position: relative;
+     font-size: 2em;
+     font-weight: 500;
+ }
+ .cardbox2
+ {
+     position: relative;
+     width: 100%;
+     padding: 20px;
+     display:grid;
+     grid-template-columns: repeat(4,1fr);
+     grid-gap: 20px;
+ }
+ .cardbox2 .card
  {
      position: relative;
      background: white;
@@ -433,12 +448,7 @@
      display: flex;
      justify-content: space-between;
  }
- .cardbox .card .numbers
- {
-     position: relative;
-     font-size: 2em;
-     font-weight: 500;
- }
+
  .cardbox .card .cardName
  {
 
@@ -451,6 +461,26 @@
      font-size: 2.5em;
  }
  .cardbox .card:hover
+ {
+
+     background: #ffe699;
+     cursor: pointer;
+
+ }
+
+
+ .cardbox2 .card .cardName
+ {
+
+     color: #999;
+ }
+ .cardbox2 .card .iconBox
+ {
+
+     color: #03a9f4;
+     font-size: 2.5em;
+ }
+ .cardbox2 .card:hover
  {
 
      background: #ffe699;

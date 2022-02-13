@@ -464,7 +464,7 @@
      padding:20px;
      padding-top: 0;
      display: grid;
-     grid-template-columns: 2fr 1fr;
+     grid-template-columns: 1fr;
      grid-gap: 20px;
  }
  .details .recentOrders
@@ -478,8 +478,8 @@
  .cardHeader
  {
      display: flex;
-     justify-content: space-between;
-     align-items: flex-start
+     justify-content:center;
+     align-items:center;
 
  }
  .cardHeader

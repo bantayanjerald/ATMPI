@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\DCC\CompanyGoalController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DCC\CompanyGoalController;
 
@@ -23,5 +24,8 @@ Route::get('/home', function () {
 });
 
 // route for dcc
-Route::get('/dcc/company_goals',[CompanyGoalController::class,'index'])->name('dcc.companyGoals.index');
+
+Route::get('/dcc/index',[CompanyGoalController::class,'index'])->name('dcc.companyGoals.index');
+Route::get('/dcc/dept',[CompanyGoalController::class,'dept'])->name('dcc.dept');
+Route::get('/dcc/company_goals/{year}',[CompanyGoalController::class,'company_goals'])->name('dcc.company_goals');
 
