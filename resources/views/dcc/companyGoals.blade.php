@@ -90,10 +90,139 @@
                         </table>
                     </div>
                 </div>
-                <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">...</div>
+                <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+                    <style>
+                        /* .deptGoalsHeader
+                        {
+                            width: 100%;
+                            display: flex;
+                            justify-content: space-between
+                         } */
+                    </style>
+                    <div class="cardBody p-5" style="width: 100%;border: 1px solid lightgray">
+                        <div class="d-flex justify-content-between deptGoalsHeader " >
+                            <button class="btn btn-primary" data-bs-target="#newGoalModal" data-bs-toggle="modal">New Record</button>
+                            <span>ACCTG Company Goals for 2019</span>
+                        </div>
+                        <table id="dataTable" class='table table-striped table-bordered table-sm' style="font-size:14px;font-weight:bold;table-layout: fixed; " border="">
+                            <thead style="text-align:center">
+                                <tr  >
+                                    <td rowspan="2"  style="white-space:wrap;width:40px">Sort</td>
+                                    <td rowspan="2"  style="width:40px;text-align:center" >Type</td>
+                                    <td rowspan="2" style="width:80px">Category</td>
+                                    <td rowspan="2"  style="white-space:wrap;width:220px">Key Result Area</td>
+                                    <td rowspan="2"  style="white-space:no-wrap;width:70px;text-align:center" >U/M</td>
+                                    <td colspan="2" style="width:60px">Jan</td>
+                                    <td colspan="2" style="width:60px">Feb</td>
+                                    <td colspan="2" style="width:60px">Mar</td>
+                                    <td colspan="2" style="width:60px">Apr</td>
+                                    <td colspan="2" style="width:60px">May</td>
+                                    <td colspan="2" style="width:60px">June</td>
+                                    <td colspan="2" style="width:60px">July</td>
+                                    <td colspan="2" style="width:60px">Aug</td>
+                                    <td colspan="2" style="width:60px">Sept</td>
+                                    <td colspan="2" style="width:60px">Oct</td>
+                                    <td colspan="2" style="width:60px">Nov</td>
+                                    <td colspan="2" style="width:60px">Dec</td>
+                                    <td style="width:100px">Action</td>
+                                </tr>
+                                <tr>
+                                    <td  style="font-size:10px;width:20px">Goal</td>
+                                    <td  style="font-size:10px;width:20px">Data</td>
+                                    <td  style="font-size:10px;width:20px">Goal</td>
+                                    <td  style="font-size:10px;width:20px">Data</td>
+                                    <td  style="font-size:10px;width:20px">Goal</td>
+                                    <td  style="font-size:10px;width:20px">Data</td>
+                                    <td  style="font-size:10px;width:20px">Goal</td>
+                                    <td  style="font-size:10px;width:20px">Data</td>
+                                    <td  style="font-size:10px;width:20px">Goal</td>
+                                    <td  style="font-size:10px;width:20px">Data</td>
+                                    <td  style="font-size:10px;width:20px">Goal</td>
+                                    <td  style="font-size:10px;width:20px">Data</td>
+                                    <td  style="font-size:10px;width:20px">Goal</td>
+                                    <td  style="font-size:10px;width:20px">Data</td>
+                                    <td  style="font-size:10px;width:20px">Goal</td>
+                                    <td  style="font-size:10px;width:20px">Data</td>
+                                    <td  style="font-size:10px;width:20px">Goal</td>
+                                    <td  style="font-size:10px;width:20px">Data</td>
+                                    <td  style="font-size:10px;width:20px">Goal</td>
+                                    <td  style="font-size:10px;width:20px">Data</td>
+                                    <td  style="font-size:10px;width:20px">Goal</td>
+                                    <td  style="font-size:10px;width:20px">Data</td>
+                                    <td  style="font-size:10px;width:20px">Goal</td>
+                                    <td  style="font-size:10px;width:20px">Data</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
               </div>
         </div>
     </div>
+    <div class="modal" id="newGoalModal" tabindex="-1">
+        <div class="modal-dialog  modal-dialog-centered modal-dialog-scrollable modal-lg">
+          <div class="modal-content">
+            <div class="modal-header bg-info text-white">
+              <h5 class="modal-title">Modal title</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                {{-- <div class="input-group input-group-sm mb-3">
+                    <span class="input-group-text" id="inputGroup-sizing-sm">Small</span>
+                    <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+                </div> --}}
+                <form action="">
+
+                    <div class="input-group mb-3">
+                        <span class="input-group-text" id="inputGroup-sizing-default">Default</span>
+                        <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                    </div>
+                    <div class="input-group mb-3">
+                        <span class="input-group-text" id="inputGroup-sizing-default">Default</span>
+                        <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                    </div>
+                    <div class="input-group mb-3">
+                        <span class="input-group-text" id="inputGroup-sizing-default">Default</span>
+                        <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                    </div>
+                    <div class="input-group mb-3">
+                        <span class="input-group-text" id="inputGroup-sizing-default">Default</span>
+                        <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                    </div>
+                    <div class="input-group mb-3">
+                        <span class="input-group-text" id="inputGroup-sizing-default">Default</span>
+                        <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                    </div>
+                    <div class="input-group mb-3">
+                        <span class="input-group-text" id="inputGroup-sizing-default">Default</span>
+                        <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                    </div>
+                    <div class="input-group mb-3">
+                        <span class="input-group-text" id="inputGroup-sizing-default">Default</span>
+                        <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                    </div>
+                    <div class="input-group mb-3">
+                        <span class="input-group-text" id="inputGroup-sizing-default">Default</span>
+                        <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                    </div>
+                    <div class="input-group mb-3">
+                        <span class="input-group-text" id="inputGroup-sizing-default">Default</span>
+                        <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                    </div>
+                </form>
+
+
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+          </div>
+        </div>
+      </div>
 </section>
 
     @section('js')
