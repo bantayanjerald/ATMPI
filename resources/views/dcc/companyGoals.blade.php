@@ -3,6 +3,12 @@
 @section('css')
     <link rel="stylesheet" href="https://cdn.datatables.net/1.11.3/css/dataTables.bootstrap5.min.css">
 @endsection
+<style>
+     #dataTable tr.even:hover td.sorting_1 {
+       background-color: grey;
+       cursor: pointer;
+   }
+</style>
 <section class="mainContent">
     <div class="details">
         <div class="recentOrders">
@@ -30,116 +36,56 @@
               </nav>
               <div class="tab-content" id="nav-tabContent">
                 <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="companyGoalsTab">
-                    <div class="cardBody p-5" style="border: 1px solid lightgray">
-
-                        <table id="dataTable" class='table table-striped table-bordered table-sm' style="width: 70%;font-size:10px" border="">
+                    <div class="cardBody p-5" style="width: 100%;border: 1px solid lightgray">
+                        {{-- {{var_dump($qual_obj_temp[0]->Qual_obj_goal)}} --}}
+                        <table id="dataTable" class='table table-striped table-bordered table-sm' style="font-size:14px;font-weight:bold;table-layout: fixed; " border="">
                             <thead>
                                 <tr>
-                                    <td rowspan="2"  style="white-space:nowrap;">Key Result Area</td>
-                                    <td rowspan="2" >U/M</td>
-                                    <td rowspan="2" >Order</td>
-                                    <td colspan="2">Jan</td>
-                                    <td colspan="2">Feb</td>
-                                    <td colspan="2">Mar</td>
-                                    <td colspan="2">Apr</td>
-                                    <td colspan="2">May</td>
-                                    <td colspan="2">June</td>
-                                    <td colspan="2">July</td>
-                                    <td colspan="2">Aug</td>
-                                    <td colspan="2">Sept</td>
-                                    <td colspan="2">Oct</td>
-                                    <td colspan="2">Nov</td>
-                                    <td colspan="2">Dec</td>
+                                    <td rowspan="2"  style="white-space:wrap;width:220px">Key Result Area</td>
+                                    <td rowspan="2"  style="white-space:no-wrap;width:70px;text-align:center" >U/M</td>
+                                    <td rowspan="2" style="width:40px">Order</td>
+                                    <td colspan="2" style="width:60px">Jan</td>
+                                    <td colspan="2" style="width:60px">Feb</td>
+                                    <td colspan="2" style="width:60px">Mar</td>
+                                    <td colspan="2" style="width:60px">Apr</td>
+                                    <td colspan="2" style="width:60px">May</td>
+                                    <td colspan="2" style="width:60px">June</td>
+                                    <td colspan="2" style="width:60px">July</td>
+                                    <td colspan="2" style="width:60px">Aug</td>
+                                    <td colspan="2" style="width:60px">Sept</td>
+                                    <td colspan="2" style="width:60px">Oct</td>
+                                    <td colspan="2" style="width:60px">Nov</td>
+                                    <td colspan="2" style="width:60px">Dec</td>
                                 </tr>
                                 <tr>
-                                    <td >Goal</td>
-                                    <td >Data</td>
-                                    <td >Goal</td>
-                                    <td >Data</td>
-                                    <td >Goal</td>
-                                    <td >Data</td>
-                                    <td >Goal</td>
-                                    <td >Data</td>
-                                    <td >Goal</td>
-                                    <td >Data</td>
-                                    <td >Goal</td>
-                                    <td >Data</td>
-                                    <td >Goal</td>
-                                    <td >Data</td>
-                                    <td >Goal</td>
-                                    <td >Data</td>
-                                    <td >Goal</td>
-                                    <td >Data</td>
-                                    <td >Goal</td>
-                                    <td >Data</td>
-                                    <td >Goal</td>
-                                    <td >Data</td>
-                                    <td >Goal</td>
-                                    <td >Data</td>
+                                    <td  style="font-size:10px;width:20px">Goal</td>
+                                    <td  style="font-size:10px;width:20px">Data</td>
+                                    <td  style="font-size:10px;width:20px">Goal</td>
+                                    <td  style="font-size:10px;width:20px">Data</td>
+                                    <td  style="font-size:10px;width:20px">Goal</td>
+                                    <td  style="font-size:10px;width:20px">Data</td>
+                                    <td  style="font-size:10px;width:20px">Goal</td>
+                                    <td  style="font-size:10px;width:20px">Data</td>
+                                    <td  style="font-size:10px;width:20px">Goal</td>
+                                    <td  style="font-size:10px;width:20px">Data</td>
+                                    <td  style="font-size:10px;width:20px">Goal</td>
+                                    <td  style="font-size:10px;width:20px">Data</td>
+                                    <td  style="font-size:10px;width:20px">Goal</td>
+                                    <td  style="font-size:10px;width:20px">Data</td>
+                                    <td  style="font-size:10px;width:20px">Goal</td>
+                                    <td  style="font-size:10px;width:20px">Data</td>
+                                    <td  style="font-size:10px;width:20px">Goal</td>
+                                    <td  style="font-size:10px;width:20px">Data</td>
+                                    <td  style="font-size:10px;width:20px">Goal</td>
+                                    <td  style="font-size:10px;width:20px">Data</td>
+                                    <td  style="font-size:10px;width:20px">Goal</td>
+                                    <td  style="font-size:10px;width:20px">Data</td>
+                                    <td  style="font-size:10px;width:20px">Goal</td>
+                                    <td  style="font-size:10px;width:20px">Data</td>
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr>
-                                    <td >Emma Smith</td>
-                                    <td>%</td>
-                                    <td>8.5</td>
-                                    <td> </td>
-                                </tr>
-                                <tr>
-                                    <td>Melody Macy</td>
-                                    <td>%
-                                    </td>
-                                    <td>7.9</td>
-                                    <td> </td>
-                                </tr>
-                                <tr>
-                                    <td>Max Smith</td>
-                                    <td>%</td>
-                                    <td>5.8</td>
-                                    <td> </td>
-                                </tr>
-                                <tr>
-                                    <td>Sean Bean</td>
-                                    <td>%</td>
-                                    <td>7.5</td>
-                                    <td> </td>
-                                </tr>
-                                <tr>
-                                    <td>Brian Cox</td>
-                                    <td>%</td>
-                                    <td>5.6</td>
-                                    <td> </td>
-                                </tr>
-                                <tr>
-                                    <td>Mikaela Collins</td>
-                                    <td>%</td>
-                                    <td>9.1</td>
-                                    <td> </td>
-                                </tr>
-                                <tr>
-                                    <td>Francis Mitchan</td>
-                                    <td>%</td>
-                                    <td>9.3</td>
-                                    <td> </td>
-                                </tr>
-                                <tr>
-                                    <td>Olivia Wild</td>
-                                    <td>%</td>
-                                    <td>5.1</td>
-                                    <td> </td>
-                                </tr>
-                                <tr>
-                                    <td>Neil Owen</td>
-                                    <td>%</td>
-                                    <td>4.9</td>
-                                    <td> </td>
-                                </tr>
-                                <tr>
-                                    <td>Dan Wilson</td>
-                                    <td>%</td>
-                                    <td>8.7</td>
-                                    <td> </td>
-                                </tr>
+
                             </tbody>
                         </table>
                     </div>
@@ -154,7 +100,9 @@
     <script src="//cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
     <script src="https://cdn.datatables.net/1.11.3/js/dataTables.bootstrap5.min.js"></script>
     <script>
+
         $(document).ready(function () {
+        var table= $('#dataTable').DataTable({"ordering": false, "pageLength": 50});
             for (i = new Date().getFullYear(); i > 1980; i--)
             {
                 $('#yearpicker').append($('<option />').val(i).html(i));
@@ -181,23 +129,122 @@
             });
 
             $("#companyGoalsTab").click(function(){
-                alert("123");
+                // alert("123");
+                table.clear().draw();
+                var count =0;
                 $.ajax({
                     type: "get",
                     url: "{{url('/dcc/company_goals')}}"+"/"+$("#yearpicker option:selected").val(),
                     dataType: "json",
                     success: function (response) {
-                        alert(response);
+                        // alert(response);
                         console.log(response);
+                        var dataAppend = "";
+                        var appendTo = $("#dataTable");
+                        // console.log(response.result[0]['qual_obj_data']);
+
+                        $.each(response.result, function (i, v) {
+
+                            //console.log(v.qual_objective);
+                            // console.log(goal_data);
+                            // var v
+
+
+
+
+                            if(v.qual_obj_goal.length != 0 && v.qual_obj_data.length != 0)
+                            {
+                                dataAppend += "<tr style='text-align:center;'>";
+                                dataAppend +="<td style='color:green; width:120px;text-align:left;'>"+v.qual_objective+"</td>";
+                                dataAppend +="<td style='text-align:center;'>"+v.qual_um+"</td>";
+                                dataAppend +="<td>"+v.qual_order+"</td>";
+
+                                for(var i = 1; i<=12; i++){
+                                    $.each(v.qual_obj_goal, function (ig, vg) {
+                                    // console.log(vg.trans_month+'-');
+                                        if(vg.trans_month==i.toString()){
+                                            // console.log("true")
+                                            if(vg.trans_goal === null||vg.trans_goal ==='' || vg.trans_goal === undefined){
+                                                dataAppend += "<td>-</td>"
+                                            }else{
+
+                                                dataAppend += "<td>"+vg.trans_goal+"</td>"
+                                            }
+                                        }
+                                    });
+
+
+
+                                    $.each(v.qual_obj_data, function (id, vd) {
+                                    // console.log(vv[v.id]+'-');
+                                        if(vd.trans_month==i.toString()){
+
+
+                                            if(vd.trans_data==null||vd.trans_data ==='' || vd.trans_data === undefined){
+
+                                                dataAppend += "<td>-</td>";
+                                                //console.log(vd.trans_data);
+                                            }else{
+                                                if(v.qual_fail=="under"){
+                                                    if(parseInt(vd.trans_data)< parseInt(v.qual_obj_goal[id].trans_goal)){
+                                                        console.log(vd.trans_data+"=------"+v.qual_obj_goal[id].trans_goal);
+
+                                                        dataAppend += "<td style='color:white;background-color:maroon''>"+vd.trans_data+"</td>";
+                                                    }
+                                                    else{
+
+                                                        dataAppend += "<td style='color:white;background-color:green'>"+vd.trans_data+"</td>";
+                                                    }
+
+                                                }
+                                                else{
+                                                    if(parseInt(vd.trans_data) > parseInt(v.qual_obj_goal[id].trans_goal)){
+
+                                                        dataAppend += "<td style='color:white;background-color:maroon'>"+vd.trans_data+"</td>";
+                                                    }
+                                                    else{
+
+                                                        dataAppend += "<td style='color:white;background-color:green'>"+vd.trans_data+"</td>";
+                                                    }
+
+
+                                                }
+
+                                            }
+                                        }
+
+                                    });
+
+
+                                }
+
+                                dataAppend += "</tr>";
+                            }
+
+
+                                // $.each(, function (indexInArray, valueOfElement) {
+
+                                // });
+
+
+
+
+                        });
+                            const tr =$(dataAppend);
+                        $.each(response.result, function (indexInArray, valueOfElement) {
+                            // console.log(tr);
+                            table.row.add(tr[indexInArray]).draw();
+                        });
+
+                        // table.row.add(dataAppend);
+
                     },
                     error:function(res){
                         alert(res);
                     }
                 });
             });
-            //  $('#dataTable').DataTable( {
-            //     "scrollX": true
-            // } );
+
         });
     </script>
     @endsection

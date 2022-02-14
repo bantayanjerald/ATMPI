@@ -5,6 +5,8 @@ namespace App\Http\Controllers\DCC;
 use App\Http\Controllers\Controller;
 use App\Models\CompanyGoals;
 use App\Models\Departments;
+use App\Models\Qual_obj_goal;
+use App\Models\Qual_obj_temp;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
@@ -17,6 +19,7 @@ class CompanyGoalController extends Controller
      */
     public function index()
     {
+
         $title = 'Company Goals';
         return view("dcc.companyGoals",
         [
@@ -99,43 +102,29 @@ class CompanyGoalController extends Controller
     }
 
     public function company_goals($year='2020'){
-        $arr_goal= [];
-        $arr_data= [];
+        $arr_result=[];
+        $arr_goal=[];
+        $arr_data=[];
 
-        $qual_obj_temp = DB::table('qual_obj_temp')->where([
+        $qual_obj_temp = Qual_obj_temp::where([
             ['qual_year','=',$year],
             ['qual_type','=','company']
-        ])->get();
+        ])->orderBy('qual_order', 'ASC')->get();
 
-        foreach($qual_obj_temp as $item){
+        // $arr_month
+        foreach ($qual_obj_temp as $key => $item) {
+            $id = $item->id;
+            $goal = $item->Qual_obj_goal;
+            $data = $item->Qual_obj_data;
+            // $arr_data[$qual_obj_temp->id]=$item;
+            $arr_goal[$id]=$goal;
+            $arr_data[$id]=$data;
 
-            $id= $item->id;
-            $qual_obj_goal= DB::table('qual_obj_goal')->where('temp_id','=',$id)->get();
-
-            foreach($qual_obj_goal as $item){
-
-                $trans_month= $item->trans_month;
-                $trans_goal= $item->trans_goal;
-                $temp_id= $item->temp_id;
-                // echo $trans_goal."-";
-                $arr_goal[$id][$trans_month]=$trans_goal;
-
-                $qual_obj_data = DB::table('qual_obj_data')->where('temp_id','=',$temp_id)->get();
-                foreach($qual_obj_data as $item){
-
-                    $trans_month= $item->trans_month;
-                    $trans_data= $item->trans_data;
-                    // echo $trans_data."-";
-                    $arr_data[$id][$trans_month]=$trans_data;
-                }
-
-            }
 
         }
 
-        return response()->json(["arr_goal"=> $arr_goal,
-        "arr_data" => $arr_data,
-       ]);
+
+        return response()->json(["result"=> $qual_obj_temp,"goal"=> $arr_goal,"data"=> $arr_data]);
         // dd($arr_data);
         // dd($arr_goal);
 
