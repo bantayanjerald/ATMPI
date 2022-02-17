@@ -102,7 +102,7 @@
                     <div class="cardBody p-5" style="width: 100%;border: 1px solid lightgray">
                         <div class="d-flex justify-content-between deptGoalsHeader " >
                             <button class="btn btn-primary" data-bs-target="#newGoalModal" data-bs-toggle="modal">New Record</button>
-                            <span>ACCTG Company Goals for 2019</span>
+                            <span class="text-info">ACCTG Company Goals for 2019</span>
                         </div>
                         <table id="dataTable" class='table table-striped table-bordered table-sm' style="font-size:14px;font-weight:bold;table-layout: fixed; " border="">
                             <thead style="text-align:center">
@@ -166,7 +166,7 @@
         <div class="modal-dialog  modal-dialog-centered modal-dialog-scrollable modal-lg">
           <div class="modal-content">
             <div class="modal-header bg-info text-white">
-              <h5 class="modal-title">Modal title</h5>
+              <h5 class="modal-title">New Goal</h5>
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
@@ -177,40 +177,53 @@
                 <form action="">
 
                     <div class="input-group mb-3">
-                        <span class="input-group-text" id="inputGroup-sizing-default">Default</span>
+                        <span class="input-group-text col-md-3 text-center" id="inputGroup-sizing-default">Apply Year</span>
                         <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
                     </div>
                     <div class="input-group mb-3">
-                        <span class="input-group-text" id="inputGroup-sizing-default">Default</span>
+                        <span class="input-group-text col-md-3 text-center" id="inputGroup-sizing-default">Department</span>
                         <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
                     </div>
                     <div class="input-group mb-3">
-                        <span class="input-group-text" id="inputGroup-sizing-default">Default</span>
+                        <span class="input-group-text col-md-3 text-center" id="inputGroup-sizing-default">Order</span>
                         <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
                     </div>
                     <div class="input-group mb-3">
-                        <span class="input-group-text" id="inputGroup-sizing-default">Default</span>
+                        <span class="input-group-text col-md-3 text-center" id="inputGroup-sizing-default">Goal Type</span>
                         <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
                     </div>
                     <div class="input-group mb-3">
-                        <span class="input-group-text" id="inputGroup-sizing-default">Default</span>
+                        <span class="input-group-text col-md-3" id="inputGroup-sizing-default">Category</span>
                         <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
                     </div>
                     <div class="input-group mb-3">
-                        <span class="input-group-text" id="inputGroup-sizing-default">Default</span>
+                        <span class="input-group-text col-md-3" id="inputGroup-sizing-default">KRA</span>
+                        <textarea class="form-control" aria-label="With textarea"></textarea>
+                    </div>
+
+                    <div class="input-group mb-3">
+                        <span class="input-group-text col-md-3" id="inputGroup-sizing-default">UM</span>
                         <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
                     </div>
                     <div class="input-group mb-3">
-                        <span class="input-group-text" id="inputGroup-sizing-default">Default</span>
+                        <span class="input-group-text col-md-3" id="inputGroup-sizing-default">Definition</span>
+                        <textarea class="form-control" aria-label="With textarea"></textarea>
+                    </div>
+                    <div class="input-group mb-3">
+                        <span class="input-group-text col-md-3" id="inputGroup-sizing-default">Formula</span>
+                        <textarea class="form-control" aria-label="With textarea"></textarea>
+                    </div>
+                    <div class="input-group mb-3">
+                        <span class="input-group-text col-md-3" id="inputGroup-sizing-default">Failure Flag</span>
                         <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
                     </div>
                     <div class="input-group mb-3">
-                        <span class="input-group-text" id="inputGroup-sizing-default">Default</span>
-                        <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                        <span class="input-group-text col-md-3" id="inputGroup-sizing-default">Scope</span>
+                        <textarea class="form-control" aria-label="With textarea"></textarea>
                     </div>
                     <div class="input-group mb-3">
-                        <span class="input-group-text" id="inputGroup-sizing-default">Default</span>
-                        <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                        <span class="input-group-text col-md-3" id="inputGroup-sizing-default">Data Source</span>
+                        <textarea class="form-control" aria-label="With textarea"></textarea>
                     </div>
                 </form>
 
