@@ -7,6 +7,10 @@
  box-sizing: border-box;
  font-family: 'Poppins', sans-serif;
 }
+
+.is-invalid{
+    color:red;
+}
 .sidebar{
  position: fixed;
  top: 0;
